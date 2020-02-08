@@ -4,9 +4,13 @@
 
 ### 1. The Architecture of the system
 
+The codes created in this repository are all based on the system architecture shown in Figure1. 
+
+![screenshot for the webpage](img/figure1.jpg)
+
 #### **Security**
 
-The codes created in this repository are all based on the system architecture shown in Figure1.  In order to provide a secure and consolidated infrastructure for our business, I create a two-tier network with 2 public subnets and two private subnets. The application server located in the public subnets are allowed to communicate with the internet while the postgreSQL database in the private subnets are only accesible by the application server in the public subnet.
+ In order to provide a secure and consolidated infrastructure for our business, I create a two-tier network with 2 public subnets and two private subnets. The application server located in the public subnets are allowed to communicate with the internet while the postgreSQL database in the private subnets are only accesible by the application server in the public subnet.
 
 I have also created three different SG for ALB, application server and datebase respectively. In doing so, we could make sure that both application and database servers are only allow to be accessed by specific host and invisible to the public traffic. 
 
