@@ -77,7 +77,7 @@ alb_dns_name = servian-techtest-alb-195736887.ap-southeast-2.elb.amazonaws.com
 db_endpoint = demodb-postgres.cc6m3cifzpdr.ap-southeast-2.rds.amazonaws.com:5432
 ```
 
-![](/Users/mark/Desktop/capture1.jpg)
+![](/Users/mark/AWS/Servian/TechTestApp/terraform/img/capture1.jpg)
 
 To remove the stack
 
