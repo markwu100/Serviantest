@@ -14,7 +14,7 @@ resource "aws_db_instance" "postgresdb" {
   engine_version       = "9.6.9"
   instance_class       = "db.t2.micro"
   identifier           = "demodb-postgres"
-  multi_az             = false
+  multi_az             = true
   name                 = "app"
   username             = "postgres"
   password             = "${var.db_password}"
