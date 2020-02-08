@@ -6,7 +6,7 @@
 
 #### **Security**
 
-The codes created in this repository are all base on the system architecture shown in Figure1.  In order to provide a secure and consolidate infrastructure for our business, I create a two-tier network with 2 public subnets and two private subnets. The application server located in the public subnets are allowed to communicate with the internet while the postgreSQL database in the private subnets are only accesible by the application server in the public subnet.
+The codes created in this repository are all based on the system architecture shown in Figure1.  In order to provide a secure and consolidated infrastructure for our business, I create a two-tier network with 2 public subnets and two private subnets. The application server located in the public subnets are allowed to communicate with the internet while the postgreSQL database in the private subnets are only accesible by the application server in the public subnet.
 
 I have also created three different SG for ALB, application server and datebase respectively. In doing so, we could make sure that both application and database servers are only allow to be accessed by specific host and invisible to the public traffic. 
 
@@ -22,7 +22,7 @@ Besides, the postgreSQL datebase is also provisiong in a highly available way. T
 
 #### **Automation**
 
-The deployment of the system is consisted of two steps. In the first stage of the deployment, I use terraform code to spin up the infrastructure with one ec2 instance up and running. After running the docker.sh scrip to build and run the application in a container, we are able to create a useful AMI base on the status of the system. 
+The deployment of the system is consisted of two stages. In the first stage of the deployment, I use terraform code to spin up the infrastructure with one ec2 instance up and running. After running the docker.sh script to build and run the application in a docker container, I am able to create a useful AMI base on the status of the system.  In the later stage, this AMI will be used as the base image to spin up the new ec2 instance.
 
 Then in the second stage of the deployment, I created the asg.tf and alb.tf file to introduce the ASG and ALB resources. We need to create a launch configuration template based on the AMI image we created in the last step. By doing so, the ASG will help to spin up a functional application server and directly server the incoming traffic should some old instance fail. 
 
@@ -74,3 +74,5 @@ db_endpoint = demodb-postgres.cc6m3cifzpdr.ap-southeast-2.rds.amazonaws.com:5432
 ```
  terraform destroy  -var 'access_key={your_access_key}' -var 'secret_access_key={your_secret_key}'
 ```
+
+![](https://tva1.sinaimg.cn/large/0082zybply1gbowipowpqj31fi0sytco.jpg)
