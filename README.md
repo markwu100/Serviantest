@@ -75,4 +75,4 @@ db_endpoint = demodb-postgres.cc6m3cifzpdr.ap-southeast-2.rds.amazonaws.com:5432
  terraform destroy  -var 'access_key={your_access_key}' -var 'secret_access_key={your_secret_key}'
 ```
 
-![](https://tva1.sinaimg.cn/large/0082zybply1gbowipowpqj31fi0sytco.jpg)
+![screenshot for the webpage](img/figure2.jpg)
